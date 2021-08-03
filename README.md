@@ -11,8 +11,8 @@ Powered by SLF4J, fully inlined, and say goodbye to lambda object creation 😲
 ## Features
 
 - Fully inlined SLF4J logger
-- lazy log message without creating lambda object
-- only showing lazy logging methods on your IDE (e.g. `logger.info {}` instead of `logger.info()`)
+- lazily create log message without creating lambda object (because everything is inlined 😋)
+- only showing lazy logging methods on your IDE (e.g. showing `logger.info {}` on your auto-complete hint instead of `logger.info()`)
 
 ## How to import
 
@@ -28,7 +28,7 @@ class MainApp {
   fun start() {
     logger.info { "an info msg" }
     val exception = SomeException()
-    logger.warn(exception) { "an warn msg with exception $exception" }
+    logger.debug(exception) { "a debug msg with exception $exception" }
   }
 }
 ```
@@ -44,8 +44,9 @@ class MainApp {
       logger.info("an info msg") // no lambda object created 😊
     }
     val exception = SomeException()
-    if (logger.isWarnEnabled()){
-      logger.warn("an warn msg with exception $exception") // notice that this string creation will not happen if warn level is not enabled
+    if (logger.isDebugEnabled()){
+      // notice that this string creation will not happen if the debug level is not enabled
+      logger.debug("a debug msg with exception $exception", exception) 
     } 
   }
 }
