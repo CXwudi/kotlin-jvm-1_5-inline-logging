@@ -33,7 +33,7 @@ dependencies {
   // Use the Kotlin JDK 8 standard library.
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-  implementation("org.slf4j:slf4j-api:1.7.32")
+  api("org.slf4j:slf4j-api:1.7.29")
 
   // Use the Kotlin test library.
   testImplementation("io.kotest:kotest-runner-junit5-jvm:4.6.1")
@@ -42,7 +42,6 @@ dependencies {
   testImplementation("ch.qos.logback:logback-classic:1.2.4")
   // non-inline logger to be compared
   testImplementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
-
 }
 
 tasks.withType<Jar> {
