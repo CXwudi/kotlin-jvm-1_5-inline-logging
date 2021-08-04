@@ -1,4 +1,4 @@
-# Kotlin/JVM 1.5 Inline Logging
+# Kotlin/JVM Inline Logging
 [![](https://jitpack.io/v/CXwudi/kotlin-jvm-1_5-inline-logging.svg)](https://jitpack.io/#CXwudi/kotlin-jvm-1_5-inline-logging)
 
 Powered by SLF4J, fully inlined, and say goodbye to lambda object creation 😲
