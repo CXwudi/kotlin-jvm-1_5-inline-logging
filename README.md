@@ -1,5 +1,6 @@
-# Kotlin/JVM 1.5 Inline Logging
-[![](https://jitpack.io/v/CXwudi/kotlin-jvm-inline-logging.svg)](https://jitpack.io/#CXwudi/kotlin-jvm-inline-logging)
+# Kotlin/JVM Inline Logging
+
+[![badge](https://jitpack.io/v/CXwudi/kotlin-jvm-inline-logging.svg)](https://jitpack.io/#CXwudi/kotlin-jvm-inline-logging)
 
 Powered by SLF4J, fully inlined, and say goodbye to lambda object creation 😲
 
@@ -41,7 +42,9 @@ class MainApp {
   }
 }
 ```
+
 Under the hook, this should be compiled as:
+
 ```kotlin
 private val logger: Logger = LoggerFactory.getLogger(
   KInlineLoggerNameResolver.fixName(MethodHandles.lookup().lookupClass())
@@ -63,5 +66,4 @@ class MainApp {
 
 ## Q: Can you support multi-platform?
 
-A: Sorry, I am not supporting it, but you can just grab the only [two source files](./lib/src/main/kotlin/mikufan/cx/inlinelogging/) in this library and modify it to suit your needs. 
-
+A: Sorry, I am not supporting it, but you can just grab the only [two source files](./lib/src/main/kotlin/mikufan/cx/inlinelogging/) in this library and modify it to suit your needs.
