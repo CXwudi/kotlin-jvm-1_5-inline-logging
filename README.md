@@ -1,5 +1,5 @@
 # Kotlin/JVM 1.5 Inline Logging
-[![](https://jitpack.io/v/CXwudi/kotlin-jvm-1_5-inline-logging.svg)](https://jitpack.io/#CXwudi/kotlin-jvm-1_5-inline-logging)
+[![](https://jitpack.io/v/CXwudi/kotlin-jvm-inline-logging.svg)](https://jitpack.io/#CXwudi/kotlin-jvm-inline-logging)
 
 Powered by SLF4J, fully inlined, and say goodbye to lambda object creation 😲
 
@@ -16,11 +16,20 @@ Powered by SLF4J, fully inlined, and say goodbye to lambda object creation 😲
 
 ## How to import
 
-Check [JitPack](https://jitpack.io/#CXwudi/kotlin-jvm-1_5-inline-logging) to see how to import
+Check [JitPack](https://jitpack.io/#CXwudi/kotlin-jvm-inline-logging) to see how to import
 
 ## How to use
 
-Example:
+Simply add 
+
+```kotlin
+private val logger = KInlineLogging.logger()
+```
+
+to anywhere you want and enjoy logging 😁
+
+For example:
+
 ```kotlin
 private val logger = KInlineLogging.logger() // an instance of KInlineLogger, which is a value class of SLF4J Logger
 
